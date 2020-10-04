@@ -13,10 +13,10 @@
 		2B1C2AE31A65DF3B00EB881C /* SCWController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2ADF1A65DF3B00EB881C /* SCWController.m */; };
 		2B1C2AE81A65DF7500EB881C /* SCWBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2AE71A65DF7500EB881C /* SCWBundle.m */; };
 		2B1C2AFF1A65EC9300EB881C /* SPWindowBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2AFE1A65EC9300EB881C /* SPWindowBundle.m */; };
-		2B3951B91A67BF450018E5B9 /* MultiSelectionSuite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B3951B81A67BF450018E5B9 /* MultiSelectionSuite.framework */; };
 		2B458F581A66DCAF00C129C7 /* NSImage+SCWExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B458F571A66DCAF00C129C7 /* NSImage+SCWExtension.m */; };
 		2B458F5E1A66E3F000C129C7 /* SCWScannedUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B458F5D1A66E3F000C129C7 /* SCWScannedUnit.m */; };
 		2BE229F71A6D45140055D1C8 /* SCWError.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE229F61A6D45140055D1C8 /* SCWError.m */; };
+		74B99B8A25292F75006EDFFB /* MultiSelectionSuite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B3951B81A67BF450018E5B9 /* MultiSelectionSuite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B3951B91A67BF450018E5B9 /* MultiSelectionSuite.framework in Frameworks */,
+				74B99B8A25292F75006EDFFB /* MultiSelectionSuite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +73,7 @@
 				2B3951B81A67BF450018E5B9 /* MultiSelectionSuite.framework */,
 				2B1C2AD01A65DEC400EB881C /* SPScannerCaptureWindow */,
 				2B1C2ACF1A65DEC400EB881C /* Products */,
+				74B99B8925292F75006EDFFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +114,13 @@
 				2B1C2AD21A65DEC400EB881C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74B99B8925292F75006EDFFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +272,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.12;
 			};
 			name = Debug;
 		};
@@ -298,7 +306,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.12;
 			};
 			name = Release;
 		};
@@ -309,12 +317,13 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
-					/Users/sascha/DATEN/DEV/Mac/OpenSource/SPScannerCaptureWindow/Libs,
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/../Libs/**",
 				);
 				INFOPLIST_FILE = SPScannerCaptureWindow/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.12;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -327,12 +336,13 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
-					/Users/sascha/DATEN/DEV/Mac/OpenSource/SPScannerCaptureWindow/Libs,
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/../Libs/**",
 				);
 				INFOPLIST_FILE = SPScannerCaptureWindow/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.12;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
 			};
